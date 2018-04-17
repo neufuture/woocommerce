@@ -982,7 +982,7 @@ class WC_Form_Handler {
 						// If valid values are empty, this is an 'any' variation so get all possible values.
 						$variations[ $attribute_key ] = $value;
 					} else {
-						throw new Exception( sprintf( __( 'Invalid value posted for %s', 'woocommerce' ), wc_attribute_label( $attribute['name'] ) ) );
+						$variations[ $attribute_key ] = $value;
 					}
 				} elseif ( '' === $valid_value ) {
 					$missing_attributes[] = wc_attribute_label( $attribute['name'] );
